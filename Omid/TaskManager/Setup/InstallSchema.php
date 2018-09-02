@@ -54,14 +54,14 @@ class InstallSchema implements InstallSchemaInterface
                 Table::TYPE_DATETIME,
                 null,
                 ['nullable' => true],
-                'Start Time'
+                'Start Date'
             )
             ->addColumn(
                 'end_time',
                 Table::TYPE_DATETIME,
                 null,
                 ['nullable' => true],
-                'End Time'
+                'End Date'
             )
             ->addColumn(
                 'assigned_person',

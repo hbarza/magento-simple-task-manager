@@ -3,14 +3,24 @@ namespace Omid\TaskManager\Controller\Adminhtml\ManageTasks;
  
 class Index extends \Magento\Backend\App\Action
 {
+    protected $resultPageFactory = false;
+
+    public function __construct(
+        \Magento\Backend\App\Action\Context $context,
+        \Magento\Framework\View\Result\PageFactory $resultPageFactory
+    ) {
+        parent::__construct($context);
+        $this->resultPageFactory = $resultPageFactory;
+    }
+
     /**
-     * Check permissons
+     * Check permission via ACL resource
      *
      * @return bool
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Webkul_Hello::employee');
+      return $this->_authorization->isAllowed('Omid_TaskManager::managetasks');
     }
 
     /**
@@ -20,6 +30,11 @@ class Index extends \Magento\Backend\App\Action
      */
     public function execute()
     {
-        echo __('Hello Webkul Team.');
+        $resultPage = $this->resultPageFactory->create();
+        $resultPage->setActiveMenu('Omid_TaskManager::managetasks');
+        $resultPage->getConfig()->getTitle()->prepend(__('Manage Tasks'));
+        $resultPage->addBreadcrumb(__('Task Manager'), __('Task Manager'));
+        $resultPage->addBreadcrumb(__('Manage Tasks'), __('Manager Tasks'));
+        return $resultPage;
     }
 }
