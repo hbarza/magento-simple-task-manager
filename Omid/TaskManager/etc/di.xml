@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <virtualType name="Omid\TaskManager\Model\ResourceModel\Task\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <virtualType name="Omid\TaskManager\Model\ResourceModel\Task\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">omid_task_manager</argument>
             <argument name="resourceModel" xsi:type="string">Omid\TaskManager\Model\ResourceModel\Task</argument>
@@ -9,7 +9,7 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="taskmanager_task_grid_data_source" xsi:type="string">Omid\TaskManager\Model\ResourceModel\Task\Collection</item>
+                <item name="taskmanager_task_grid_data_source" xsi:type="string">Omid\TaskManager\Model\ResourceModel\Task\Grid\Collection</item>
             </argument>
         </arguments>
     </type>

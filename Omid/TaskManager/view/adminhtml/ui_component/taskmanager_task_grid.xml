@@ -189,6 +189,19 @@
                 </item>
             </argument>
         </column>
+
+       <column name="status" >
+           <argument name="data" xsi:type="array">
+               <item name="options" xsi:type="object">Omid\TaskManager\Model\System\Source\Status</item>
+               <item name="config" xsi:type="array">
+                   <item name="filter" xsi:type="string">select</item>
+                   <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+                   <item name="dataType" xsi:type="string">select</item>
+                   <item name="label" xsi:type="string" translate="true">Status</item>
+               </item>
+           </argument>
+       </column>
+
         <actionsColumn name="actions" class="Omid\TaskManager\Ui\Component\Listing\Column\Actions">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">

@@ -42,7 +42,7 @@ class Delete extends \Magento\Framework\App\Action\Action {
                 throw new \Exception('Task is not available anymore');
             }
             $task->delete();
-            $this->messageManager->addSuccess('Task deleted successfully');
+            $this->messageManager->addSuccess('Task have been successfully deleted');
         } catch (\Exception $e) {
             $this->messageManager->addError($e->getMessage());
         }
