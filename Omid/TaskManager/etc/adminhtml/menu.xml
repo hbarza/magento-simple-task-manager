@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Omid_TaskManager::taskmanager" title="Task Manager" module="Omid_TaskManager" sortOrder="10" resource="Omid_TaskManager::taskmanager"/>
+        <add id="Omid_TaskManager::managetasks" title="Manage Tasks" module="Omid_TaskManager" sortOrder="10" action="taskmanager/managetasks" resource="Omid_TaskManager::managetasks" parent="Omid_TaskManager::taskmanager"/>
+    </menu>
+</config>
