@@ -1,7 +1,7 @@
 <?php
 namespace Omid\TaskManager\Controller\Adminhtml\ManageTasks;
  
-class Index extends \Magento\Backend\App\Action
+class Edit extends \Magento\Backend\App\Action
 {
     protected $resultPageFactory = false;
 
@@ -32,9 +32,9 @@ class Index extends \Magento\Backend\App\Action
     {
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Omid_TaskManager::managetasks');
-        $resultPage->getConfig()->getTitle()->prepend(__('Manage Tasks'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Edit Task'));
         $resultPage->addBreadcrumb(__('Task Manager'), __('Task Manager'));
-        $resultPage->addBreadcrumb(__('Manage Tasks'), __('Manager Tasks'));
+        $resultPage->addBreadcrumb(__('Edit Task'), __('Edit Task'));
         return $resultPage;
     }
 }

@@ -37,6 +37,93 @@
             </argument>
         </argument>
     </dataSource>
+
+    <!-- Listing Top -->
+    <filters name="listing_filters">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="columnsProvider" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid.taskmanager_task_columns</item>
+                <item name="storageConfig" xsi:type="array">
+                    <item name="provider" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid.listing_top.bookmarks</item>
+                    <item name="namespace" xsi:type="string">current.filters</item>
+                </item>
+                <item name="childDefaults" xsi:type="array">
+                    <item name="provider" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid.listing_top.listing_filters</item>
+                    <item name="imports" xsi:type="array">
+                        <item name="visible" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid.taskmanager_task_columns.${ $.index }:visible</item>
+                    </item>
+                </item>
+            </item>
+        </argument>
+    </filters>
+    <paging name="listing_paging">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="storageConfig" xsi:type="array">
+                    <item name="provider" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid.listing_top.bookmarks</item>
+                    <item name="namespace" xsi:type="string">current.paging</item>
+                </item>
+                <item name="selectProvider" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid.taskmanager_task_columns.ids</item>
+            </item>
+        </argument>
+    </paging>
+    <massaction name="listing_massaction">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="selectProvider" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid.taskmanager_task_columns.ids</item>
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
+                <item name="indexField" xsi:type="string">task_id</item>
+            </item>
+        </argument>
+        <action name="delete">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="type" xsi:type="string">delete</item>
+                    <item name="label" xsi:type="string" translate="true">Delete</item>
+                    <item name="url" xsi:type="url" path="*/*/massDelete"/>
+                    <item name="confirm" xsi:type="array">
+                        <item name="title" xsi:type="string" translate="true">Delete Items</item>
+                        <item name="message" xsi:type="string" translate="true">Are you sure to delete selected tesks?</item>
+                    </item>
+                </item>
+            </argument>
+        </action>
+    </massaction>
+    <exportButton name="export_button">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="selectProvider" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid.taskmanager_task_columns.ids</item>
+            </item>
+        </argument>
+    </exportButton>
+    <bookmark name="bookmarks">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="storageConfig" xsi:type="array">
+                    <item name="namespace" xsi:type="string">taskmanager_task_grid</item>
+                </item>
+            </item>
+        </argument>
+    </bookmark>
+    <component name="columns_controls">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="columnsData" xsi:type="array">
+                    <item name="provider" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid.tasksmanager_task_columns</item>
+                </item>
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>
+                <item name="displayArea" xsi:type="string">dataGridActions</item>
+            </item>
+        </argument>
+    </component>
+
+    <container name="listing_top">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="template" xsi:type="string">ui/grid/toolbar</item>
+            </item>
+        </argument>
+    </container>
     <columns name="taskmanager_task_columns">
         <!--The list of columns-->
         <selectionsColumn name="ids">
@@ -102,5 +189,12 @@
                 </item>
             </argument>
         </column>
+        <actionsColumn name="actions" class="Omid\TaskManager\Ui\Component\Listing\Column\Actions">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="indexField" xsi:type="string">task_id</item>
+                </item>
+            </argument>
+        </actionsColumn>
     </columns>
 </listing>
