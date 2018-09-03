@@ -1,6 +1,6 @@
 <?php
 
-namespace Omid\TaskManager\Block\Adminhtml\TaskManager\Grid\Renderer\Action;
+namespace Omid\TaskManager\Block\Adminhtml\Task\Grid\Renderer\Action;
 
 class UrlBuilder
 {

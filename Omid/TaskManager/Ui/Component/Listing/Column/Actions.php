@@ -5,7 +5,7 @@ namespace Omid\TaskManager\Ui\Component\Listing\Column;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;
-use Omid\TaskManager\Block\Adminhtml\TaskManager\Grid\Renderer\Action\UrlBuilder;
+use Omid\TaskManager\Block\Adminhtml\Task\Grid\Renderer\Action\UrlBuilder;
 use Magento\Framework\UrlInterface;
 
 class Actions extends Column

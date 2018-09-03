@@ -4,7 +4,7 @@ namespace Omid\TaskManager\Controller\Adminhtml\ManageTasks;
 
 use Omid\TaskManager\Model\Task;
  
-class Edit extends \Magento\Backend\App\Action
+class Add extends \Magento\Backend\App\Action
 {
     protected $resultPageFactory = false;
 
@@ -27,7 +27,7 @@ class Edit extends \Magento\Backend\App\Action
     }
 
     /**
-     * Task Manger edit task page
+     * Task Manger new task page
      *
      * @return \Magento\Backend\Model\View\Result\Page
      */
@@ -35,9 +35,9 @@ class Edit extends \Magento\Backend\App\Action
     {
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Omid_TaskManager::managetasks');
-        $resultPage->getConfig()->getTitle()->prepend(__('Edit Task'));
+        $resultPage->getConfig()->getTitle()->prepend(__('New Task'));
         $resultPage->addBreadcrumb(__('Task Manager'), __('Task Manager'));
-        $resultPage->addBreadcrumb(__('Edit Task'), __('Edit Task'));
+        $resultPage->addBreadcrumb(__('New Task'), __('New Task'));
 
 
         try {
