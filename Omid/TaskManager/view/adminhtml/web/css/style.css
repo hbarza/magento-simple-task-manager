@@ -1,0 +1,3 @@
+.admin__menu .item-taskmanager > a:before {
+    content: '\e627';
+}
