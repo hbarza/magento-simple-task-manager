@@ -1,4 +1,12 @@
 <?php
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager tasks grid
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
 
 namespace Omid\TaskManager\Block\Adminhtml\Task\Grid\Renderer\Action;
 
@@ -17,7 +25,7 @@ class UrlBuilder
         $this->frontendUrlBuilder = $frontendUrlBuilder;
     }
     /**
-     * Get action url
+     * Get action url for rows action column in grid
      *
      * @param string $routePath
      * @param string $scope

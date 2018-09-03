@@ -1,4 +1,12 @@
 <?php
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Generating row actions (edit/delete) for tasks grid
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
 
 namespace Omid\TaskManager\Ui\Component\Listing\Column;
 

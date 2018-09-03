@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Tasks grid uiComponent
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
+-->
+
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <!--Declare data source, columns list, button -->
     <argument name="data" xsi:type="array">
+        <!--Declare the data source name -->
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid_data_source</item>
             <item name="deps" xsi:type="string">taskmanager_task_grid.taskmanager_task_grid_data_source</item>
-            <!--Declare the data source name which will be defined below-->
         </item>
         <item name="spinner" xsi:type="string">taskmanager_task_columns</item>
-        <!--Declare the listing of columns which will be defined below-->
+        <!--The button on the top of the Grid -->
         <item name="buttons" xsi:type="array">
             <item name="add" xsi:type="array">
                 <item name="name" xsi:type="string">add</item>
@@ -16,11 +27,11 @@
                 <item name="class" xsi:type="string">primary</item>
                 <item name="url" xsi:type="string">*/*/add</item>
             </item>
-            <!--The button on the top of the Grid-->
         </item>
     </argument>
+    
+    <!--The data source provider-->
     <dataSource name="taskmanager_task_grid_data_source">
-        <!--The data source-->
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
             <argument name="name" xsi:type="string">taskmanager_task_grid_data_source</argument>
@@ -117,6 +128,7 @@
         </argument>
     </component>
 
+    <!-- Listing Top Container-->
     <container name="listing_top">
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
@@ -124,8 +136,9 @@
             </item>
         </argument>
     </container>
+
+    <!--The list of columns-->
     <columns name="taskmanager_task_columns">
-        <!--The list of columns-->
         <selectionsColumn name="ids">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">

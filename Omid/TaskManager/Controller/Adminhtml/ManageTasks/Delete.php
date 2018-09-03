@@ -1,4 +1,13 @@
 <?php
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager delete task action
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
+
 namespace Omid\TaskManager\Controller\Adminhtml\ManageTasks;
 
 use Omid\TaskManager\Model\TaskFactory;
@@ -32,6 +41,11 @@ class Delete extends \Magento\Framework\App\Action\Action {
         return $this->_authorization->isAllowed('Omid_TaskManager::managetasks');
     }
 
+    /**
+     * Delete selcted task
+     *
+     * @return \Magento\Backend\Model\View\Result\Page
+     */
     public function execute() 
     {
         $id = $this->getRequest()->getParam('id');

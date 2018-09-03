@@ -1,4 +1,12 @@
 <?php
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Generice button to use by task form buttons
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
 
 namespace Omid\TaskManager\Block\Adminhtml\Task\Edit;
 

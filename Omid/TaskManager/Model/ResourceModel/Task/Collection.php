@@ -1,4 +1,12 @@
 <?php
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Tasks data resouce collection model
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
 
 namespace Omid\TaskManager\Model\ResourceModel\Task;
 

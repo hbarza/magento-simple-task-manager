@@ -1,4 +1,13 @@
 <?php
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Show tasks grid action
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
+
 namespace Omid\TaskManager\Controller\Adminhtml\ManageTasks;
  
 class Index extends \Magento\Backend\App\Action

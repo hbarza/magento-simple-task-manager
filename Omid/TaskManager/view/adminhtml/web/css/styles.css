@@ -1,0 +1,13 @@
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Custom CSS file to add needed styles for module
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
+
+ /* change menu icon */
+ .admin__menu .item-taskmanager > a:before {
+    content: '\e627';
+}

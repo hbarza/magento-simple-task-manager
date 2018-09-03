@@ -1,4 +1,12 @@
 <?php
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Delete tasks mass action in grid
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
 
 namespace Omid\TaskManager\Controller\Adminhtml\ManageTasks;
 

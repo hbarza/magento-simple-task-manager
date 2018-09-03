@@ -1,4 +1,12 @@
 <?php
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Task data provider for add/edit form
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
 
 namespace Omid\TaskManager\Model\Task;
 
@@ -26,6 +34,11 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
     }
 
+    /**
+     * Server data to edit form
+     * 
+     * @return array
+     */
     public function getData()
     {
         if (isset($this->loadedData)) {

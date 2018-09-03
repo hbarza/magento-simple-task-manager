@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Task add/edit form uiComponent
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
+-->
+
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <!--Declare data source, fields list, buttons -->
     <argument name="data" xsi:type="array">
+        <!--Declare the data source name -->
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">taskmanager_task_form.taskmanager_task_form_data_source</item>
             <item name="deps" xsi:type="string">taskmanager_task_form.taskmanager_task_form_data_source</item>
@@ -10,12 +23,14 @@
             <item name="type" xsi:type="string">tabs</item>
         </item>
 
+        <!--Declare form buttons -->
         <item name="buttons" xsi:type="array">
             <item name="back" xsi:type="string">Omid\TaskManager\Block\Adminhtml\Task\Edit\BackButton</item>
             <item name="save" xsi:type="string">Omid\TaskManager\Block\Adminhtml\Task\Edit\SaveButton</item>
         </item>
     </argument>
 
+    <!--The data source provider-->
     <dataSource name="taskmanager_task_form_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Omid\TaskManager\Model\Task\DataProvider</argument>
@@ -30,6 +45,7 @@
         </argument>
     </dataSource>
 
+    <!--The list of fields-->
     <fieldset name="task">
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">

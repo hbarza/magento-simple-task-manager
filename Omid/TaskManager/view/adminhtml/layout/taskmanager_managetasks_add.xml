@@ -1,4 +1,16 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Add new task page route handler to render page layout
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
+ */
+-->
+
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <!-- Use edit layout renderer -->
     <update handle="taskmanager_managetasks_edit"/>
 </page>

@@ -1,8 +1,11 @@
 <?php
-
 /**
- * Copyright © 2016 Magento. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright © 2018 [COMPANY]. All rights reserved.
+ * 
+ * Omid_TaskManager Sample data for test in installation process
+ * 
+ * @category    Omid_TaskManager
+ * @author      Omid
  */
 
 namespace Omid\TaskManager\Setup;
